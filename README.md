@@ -6,6 +6,8 @@ The modulefile here is to load anaconda environment, then activate it's alphafol
 
 >> module load alphafold
 
+This will load the anaconda module, and the activate the alphafold env.
+
 When to remove the module:
 
 >> module rm alphafold
