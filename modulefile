@@ -22,5 +22,5 @@ if { [module-info mode load] } {
   puts stderr "     the AlphaFold 2.2.0"
   puts stdout "source activate alphafold;"
 } elseif { [module-info mode remove] } {
-  puts stdout "source deactivate;"
+  puts stdout "conda deactivate;"
 }
