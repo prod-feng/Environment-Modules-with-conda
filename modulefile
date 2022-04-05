@@ -1,0 +1,26 @@
+#%Module1.0#########################################
+##  modulefile
+##
+proc ModulesHelp { } {
+
+        puts stderr "\tAdds AlphaFold to your environment"
+}
+
+module-whatis   "Adds AlphaFold to your environment"
+
+module load     anaconda3/3.7
+
+set             app_root        /scratch/software/alphafold-2.2.0
+
+
+prepend-path    PATH              $app_root/
+
+prepend-path    PYTHONPATH        $app_root/alphafold
+
+if { [module-info mode load] } {
+  puts stderr "You are now ready to use"
+  puts stderr "     the AlphaFold 2.2.0"
+  puts stdout "source activate alphafold;"
+} elseif { [module-info mode remove] } {
+  puts stdout "source deactivate;"
+}
